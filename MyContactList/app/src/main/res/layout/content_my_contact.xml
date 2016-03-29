@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cs442.vgodhamg.mycontactlist.MyContact"
+    android:background="@drawable/imgback"
+    tools:showIn="@layout/activity_my_contact">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:id="@+id/listViewContact"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button"
+        android:layout_alignRight="@+id/edit_phone"
+        android:layout_alignEnd="@+id/edit_phone"
+        android:layout_below="@+id/spinner" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh Contact List"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:id="@+id/edit_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="CONTACT NAME"
+        android:capitalize="words"
+        android:layout_toStartOf="@+id/edit_phone"
+        android:layout_toLeftOf="@+id/edit_phone" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:id="@+id/edit_phone"
+        android:inputType="number"
+        android:hint="PHN NO."
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="0dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Contact"
+        android:id="@+id/add_contact"
+        android:layout_below="@+id/edit_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Group Contacts"
+        android:id="@+id/groupbtn"
+        android:layout_below="@+id/edit_phone"
+        android:layout_alignRight="@+id/edit_phone"
+        android:layout_alignEnd="@+id/edit_phone" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/edit_name"
+        android:layout_marginTop="49dp"
+        android:layout_toEndOf="@+id/edit_name" />
+
+</RelativeLayout>
